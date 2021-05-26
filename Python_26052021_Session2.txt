@@ -1,0 +1,108 @@
+Python 3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 14:05:16) [MSC v.1915 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> print('C:\some\name')
+C:\some
+ame
+>>> print(r'C:\some\name')
+C:\some\name
+>>> print("""\i
+... am
+... sourav"""\)
+  File "<stdin>", line 3
+    sourav"""\)
+              ^
+SyntaxError: unexpected character after line continuation character
+>>> print("""\i
+... am
+... sourav""")
+\i
+am
+sourav
+>>> print("""\i
+... am
+... sourav\""")
+... sourav""\")
+... ^Z
+
+  File "<stdin>", line 4
+    sourav""\")
+              ^
+SyntaxError: EOF while scanning triple-quoted string literal
+>>> print("""i
+... am
+... sourav""")
+i
+am
+sourav
+>>> 3 * 'un' + 'ium'
+'unununium'
+>>> 'py''th''on'
+'python'
+>>> text = ('Put several strings within parentheses '
+... 'to have them joined together.')
+>>> text
+'Put several strings within parentheses to have them joined together.'
+>>> a = 'sefali'
+>>> a 'mund'
+  File "<stdin>", line 1
+    a 'mund'
+           ^
+SyntaxError: invalid syntax
+>>> 'sefali' 'mund'
+'sefalimund'
+>>> a + 'mund'
+'sefalimund'
+>>> word = 'sefali'
+>>> word[0]
+'s'
+>>> word[word.length-1]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'str' object has no attribute 'length'
+>>> word[-1]
+'i'
+>>> word[-6]
+'s'
+>>> word[5]
+'i'
+>>> var = 'sourav mund'
+>>> var[-1:-4]
+''
+>>> var[8:11]
+'und'
+>>> var[7:11]
+'mund'
+>>> var[-4:-1]
+'mun'
+>>> var[-4:0]
+''
+>>> var[-4:-0]
+''
+>>> var[-5:-1]
+' mun'
+>>> var[-5:]
+' mund'
+>>> var[-9:-5]
+'urav'
+>>> var[-8:-5]
+'rav'
+>>> var[:6]
+'sourav'
+>>> var[7:]
+'mund'
+>>> temp = 'sourav'
+>>> temp[0] = 'p'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object does not support item assignment
+>>> 'p' + temp[1:]
+'pourav'
+>>> temp[len(temp)-1]
+'v'
+>>> temp[len(temp)-1:]
+'v'
+>>> temp[:len(temp)-1]
+'soura'
+>>> temp[0:len(temp)-2]
+'sour'
+>>>
